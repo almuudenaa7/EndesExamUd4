@@ -1,6 +1,6 @@
 public class Profesor extends Padre {
 
-    private String especialidad;
+    protected String especialidad;
 
     public Profesor(String nombre, String especialidad) {
         super(nombre);

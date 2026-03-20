@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Alumno extends Padre{
 
-    private int edad;
-    private ArrayList<Matricula> matriculas;
+    protected int edad;
+    protected ArrayList<Matricula> matriculas;
 
     public Alumno(String nombre, int edad) {
         super(nombre);

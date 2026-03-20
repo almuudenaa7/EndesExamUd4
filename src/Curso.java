@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Curso extends Padre{
 
-    private ArrayList<Alumno> alumnos;
-    private ArrayList<Asignatura> asignaturas;
-    private ArrayList<Profesor> profesores;
+    protected ArrayList<Alumno> alumnos;
+    protected ArrayList<Asignatura> asignaturas;
+    protected ArrayList<Profesor> profesores;
 
     public Curso(String nombre) {
         super(nombre);
