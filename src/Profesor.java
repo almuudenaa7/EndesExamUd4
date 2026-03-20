@@ -8,8 +8,10 @@ public class Profesor extends Padre {
         this.setEspecialidad(especialidad);
     }
 
-    public void mostrar() {
+    @Override
+    public void mostrarDatos() {
         System.out.println("Profesor: " + nombre + " - " + getEspecialidad());
+
     }
 
     public String getEspecialidad() {

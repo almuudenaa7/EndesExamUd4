@@ -12,7 +12,8 @@ public class Matricula {
         this.setNota(nota);
     }
 
-    public void mostrar() {
+
+    public void mostrarDatos() {
         System.out.println(getAlumno().nombre + " - " +
                 getAsignatura().nombre + " - " +
                 getProfesor().nombre + " - Nota: " + getNota());

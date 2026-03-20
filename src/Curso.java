@@ -25,7 +25,8 @@ public class Curso extends Padre{
         getProfesores().add(p);
     }
 
-    public void mostrarTodo() {
+    @Override
+    public void mostrarDatos() {
         System.out.println("CURSO: " + nombre);
 
         for (Alumno a : getAlumnos()) {

@@ -15,6 +15,7 @@ public class Alumno extends Padre{
         getMatriculas().add(m);
     }
 
+    @Override
     public void mostrarDatos() {
         System.out.println("Alumno: " + nombre);
 
