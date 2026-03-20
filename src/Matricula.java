@@ -13,6 +13,7 @@ public class Matricula {
     }
 
 
+
     public void mostrarDatos() {
         System.out.println(getAlumno().nombre + " - " +
                 getAsignatura().nombre + " - " +

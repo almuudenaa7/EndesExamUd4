@@ -10,8 +10,18 @@ public class Main {
         Profesor p1 = new Profesor("Juan", "Matematicas");
         Profesor p2 = new Profesor("Laura", "Programacion");
 
-        Asignatura as1 = new Asignatura("Matematicas");
-        Asignatura as2 = new Asignatura("Programacion");
+        Asignatura as1 = new Asignatura("Matematicas") {
+            @Override
+            public void mostrarDatos() {
+
+            }
+        };
+        Asignatura as2 = new Asignatura("Programacion") {
+            @Override
+            public void mostrarDatos() {
+
+            }
+        };
 
         curso.agregarAlumno(a1);
         curso.agregarAlumno(a2);
@@ -26,7 +36,7 @@ public class Main {
         gestor.crearMatricula(a1, as2, p2, 4);
         gestor.crearMatricula(a2, as1, p1, 9);
 
-        curso.mostrarTodo();
+        curso.mostrarDatos();
 
         System.out.println("------ MATRÍCULAS ------");
         gestor.mostrarTodas();
