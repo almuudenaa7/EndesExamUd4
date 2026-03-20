@@ -2,38 +2,46 @@ import java.util.ArrayList;
 
 public class Alumno extends Padre{
 
-    public int edad;
-    public ArrayList<Matricula> matriculas;
+    private int edad;
+    private ArrayList<Matricula> matriculas;
 
     public Alumno(String nombre, int edad) {
         super(nombre);
         this.edad = edad;
-        this.matriculas = new ArrayList<>();
+        this.setMatriculas(new ArrayList<>());
     }
 
     public void matricular(Matricula m) {
-        matriculas.add(m);
+        getMatriculas().add(m);
     }
 
     public void mostrarDatos() {
         System.out.println("Alumno: " + nombre);
 
-        for (Matricula m : matriculas) {
-            System.out.println("Asignatura: " + m.asignatura.nombre +
-                    " Profesor: " + m.profesor.nombre +
-                    " Nota: " + m.nota);
+        for (Matricula m : getMatriculas()) {
+            System.out.println("Asignatura: " + m.getAsignatura().nombre +
+                    " Profesor: " + m.getProfesor().nombre +
+                    " Nota: " + m.getNota());
         }
     }
 
     public double calcularMedia() {
         double suma = 0;
 
-        for (Matricula m : matriculas) {
-            suma += m.nota;
+        for (Matricula m : getMatriculas()) {
+            suma += m.getNota();
         }
 
-        if (matriculas.size() == 0) return 0;
+        if (getMatriculas().size() == 0) return 0;
 
-        return suma / matriculas.size();
+        return suma / getMatriculas().size();
+    }
+
+    public ArrayList<Matricula> getMatriculas() {
+        return matriculas;
+    }
+
+    public void setMatriculas(ArrayList<Matricula> matriculas) {
+        this.matriculas = matriculas;
     }
 }
