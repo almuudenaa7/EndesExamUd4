@@ -1,14 +1,13 @@
 import java.util.ArrayList;
 
-public class Curso {
+public class Curso extends Padre{
 
-    public String nombre;
     public ArrayList<Alumno> alumnos;
     public ArrayList<Asignatura> asignaturas;
     public ArrayList<Profesor> profesores;
 
     public Curso(String nombre) {
-        this.nombre = nombre;
+        super(nombre);
         alumnos = new ArrayList<>();
         asignaturas = new ArrayList<>();
         profesores = new ArrayList<>();

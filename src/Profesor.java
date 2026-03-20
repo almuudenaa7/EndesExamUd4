@@ -1,9 +1,9 @@
-public class Profesor {
+public class Profesor extends Padre {
 
-    public String nombre;
     public String especialidad;
 
     public Profesor(String nombre, String especialidad) {
+        super(nombre);
         this.nombre = nombre;
         this.especialidad = especialidad;
     }

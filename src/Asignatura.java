@@ -1,8 +1,6 @@
-public class Asignatura {
-
-    public String nombre;
+public class Asignatura extends Padre{
 
     public Asignatura(String nombre) {
-        this.nombre = nombre;
+        super(nombre);
     }
 }
